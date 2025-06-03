@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>GreatLuck - Bola 8 Mágica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Bola 8 Mágica 🎱</h1>
+    <input type="text" id="pregunta" placeholder="Haz tu pregunta..." />
+    <button onclick="responder()">Consultar</button>
+    <div class="bola">
+      <div class="respuesta" id="respuesta">🎱</div>
+    </div>
+  </main>
+
+  <script>
+    const respuestas = [
+      "Sí.",
+      "No.",
+      "Tal vez.",
+      "Claro que sí.",
+      "Definitivamente no.",
+      "Es posible.",
+      "No puedo decirlo.",
+      "Pregunta después."
+    ];
+
+    function responder() {
+      const respuesta = respuestas[Math.floor(Math.random() * respuestas.length)];
+      document.getElementById("respuesta").textContent = respuesta;
+    }
+  </script>
+</body>
+</html>
